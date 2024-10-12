@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" > 
+    <meta name="Amazon website" content="This is a calculator using HTML, CSS and JavaScript" >
+    <meta name="Auther" content="Neamat-Abdollah" >
+    <meta name="description" content="Calculator using HTML, CSS and JavaScript" >
+    <meta name="Nationality" content="Egyption" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, web, portfolio, developer, front-end ,cv,amazon, calculator">
+    <meta name="robots" content="index,follow" >
+    <meta property="og:title" content="Calculator" >
+    <meta property="og:description" content="Calculator using HTML, CSS and JavaScript" >
+    <meta property="og:image" content="" >
+    <meta property="og:url" content="" >
+    <meta property="og:type" content="website" >
+    <link rel="icon" type="image/x-icon" href="">   
+    <link rel="stylesheet" href="styles.css" >
+  </head>
+  <body>
+    <!-- calculator project : https://supersimple.dev/projects/calculator/ -->
+    <div>
+      <p class="resultOnScreen"></p>
+      <hr>
+      <p>
+        <button onclick="
+          calculatorUpdate('1');   
+        ">1</button>
+        <button onclick="
+          calculatorUpdate('2');    
+        ">2</button>
+        <button onclick="
+          calculatorUpdate('3');    
+        ">3</button>
+        <button class="operations" onclick="
+          calculatorUpdate(' + ');    
+        ">+</button>
+      </p>
+      <p>
+        <button onclick="
+          calculatorUpdate('4');    
+        ">4</button>
+        <button onclick="
+          calculatorUpdate('5');    
+        ">5</button>
+        <button onclick="
+          calculatorUpdate('6');    
+        ">6</button>
+        <button class="operations" onclick="
+          calculatorUpdate(' - ');    
+        ">-</button>
+      </p>  
+      <p>
+        <button onclick="
+          calculatorUpdate('7');    
+        ">7</button>
+        <button onclick="
+          calculatorUpdate('8');    
+        ">8</button>
+        <button onclick="
+          calculatorUpdate('9');    
+        ">9</button>
+        <button class="operations" onclick="
+          calculatorUpdate(' * ');      
+        ">*</button>
+      </p> 
+      <p>
+        <button onclick="
+          calculatorUpdate('0');    
+        " class="zeroButton">0</button>
+        <button onclick="
+          calculatorUpdate(' . ');    
+        ">.</button>
+        <button class="operations" onclick="
+          calculatorUpdate(' / ');   
+        ">/</button>
+      </p>
+    
+      <p>
+        <button id="clear"
+        onclick="
+          calculation = '';
+          //console.log('Cleared.');
+          displayResult();
+          localStorage.setItem('calculation', calculation);
+        ">Clear</button>
+        <button class="operations equalButton" onclick="
+            calculation = eval(calculation);  
+            //console.log(calculation);
+            displayResult(); 
+            localStorage.setItem('calculation', calculation);   
+        ">=</button>
+      </p>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
